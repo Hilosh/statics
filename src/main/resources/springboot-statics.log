@@ -1,0 +1,469 @@
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 919 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2da27c5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2532 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 20.771 seconds (JVM running for 27.315)
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 17 ms
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-2] === ERROR === o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] ==== Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379] with root cause
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:665)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:612)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:529)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:491)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-50] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-50] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-50] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 961 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cb5f6e3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1868 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.241 seconds (JVM running for 25.305)
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 18 ms
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-3] === ERROR === o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] ==== Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.serializer.SerializationException: Cannot deserialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: com.ag.statics.model.Movie; local class incompatible: stream classdesc serialVersionUID = -66211075206476780, local class serialVersionUID = 5524870828148082459] with root cause
+java.io.InvalidClassException: com.ag.statics.model.Movie; local class incompatible: stream classdesc serialVersionUID = -66211075206476780, local class serialVersionUID = 5524870828148082459
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:616)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1829)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1713)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1986)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1535)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:422)
+	at org.springframework.core.serializer.DefaultDeserializer.deserialize(DefaultDeserializer.java:72)
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:73)
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:36)
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.deserialize(JdkSerializationRedisSerializer.java:82)
+	at org.springframework.data.redis.serializer.DefaultRedisElementReader.read(DefaultRedisElementReader.java:48)
+	at org.springframework.data.redis.serializer.RedisSerializationContext$SerializationPair.read(RedisSerializationContext.java:226)
+	at org.springframework.data.redis.cache.RedisCache.deserializeCacheValue(RedisCache.java:254)
+	at org.springframework.data.redis.cache.RedisCache.lookup(RedisCache.java:88)
+	at org.springframework.cache.support.AbstractValueAdaptingCache.get(AbstractValueAdaptingCache.java:58)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doGet(AbstractCacheInvoker.java:73)
+	at org.springframework.cache.interceptor.CacheAspectSupport.findInCaches(CacheAspectSupport.java:554)
+	at org.springframework.cache.interceptor.CacheAspectSupport.findCachedItem(CacheAspectSupport.java:519)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:401)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.ag.statics.service.Impl.MovieServiceImpl$$EnhancerBySpringCGLIB$$f9cced7c.selectMovieById(<generated>)
+	at com.ag.statics.controller.MovieController.selectMovieTop(MovieController.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-12 === [Thread-42] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1042 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4bed3c65] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1796 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.772 seconds (JVM running for 25.618)
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 11 ms
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-2] === ERROR === o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] ==== Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.serializer.SerializationException: Cannot deserialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: com.ag.statics.model.Movie; local class incompatible: stream classdesc serialVersionUID = -66211075206476780, local class serialVersionUID = 5524870828148082459] with root cause
+java.io.InvalidClassException: com.ag.statics.model.Movie; local class incompatible: stream classdesc serialVersionUID = -66211075206476780, local class serialVersionUID = 5524870828148082459
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:616)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1829)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1713)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1986)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1535)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:422)
+	at org.springframework.core.serializer.DefaultDeserializer.deserialize(DefaultDeserializer.java:72)
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:73)
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:36)
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.deserialize(JdkSerializationRedisSerializer.java:82)
+	at org.springframework.data.redis.serializer.DefaultRedisElementReader.read(DefaultRedisElementReader.java:48)
+	at org.springframework.data.redis.serializer.RedisSerializationContext$SerializationPair.read(RedisSerializationContext.java:226)
+	at org.springframework.data.redis.cache.RedisCache.deserializeCacheValue(RedisCache.java:254)
+	at org.springframework.data.redis.cache.RedisCache.lookup(RedisCache.java:88)
+	at org.springframework.cache.support.AbstractValueAdaptingCache.get(AbstractValueAdaptingCache.java:58)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doGet(AbstractCacheInvoker.java:73)
+	at org.springframework.cache.interceptor.CacheAspectSupport.findInCaches(CacheAspectSupport.java:554)
+	at org.springframework.cache.interceptor.CacheAspectSupport.findCachedItem(CacheAspectSupport.java:519)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:401)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.ag.statics.service.Impl.MovieServiceImpl$$EnhancerBySpringCGLIB$$bc829875.selectMovieById(<generated>)
+	at com.ag.statics.controller.MovieController.selectMovieTop(MovieController.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [http-nio-19090-exec-5] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [http-nio-19090-exec-8] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-48] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-48] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-48] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1081 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3bb877f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1837 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.132 seconds (JVM running for 25.028)
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 17 ms
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-3] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-3] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-3] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-47] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-47] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-47] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1155 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f54e1c88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1844 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.132 seconds (JVM running for 24.984)
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 10 ms
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-2] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-47] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-47] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-47] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1235 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3442ae2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2193 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.919 seconds (JVM running for 25.785)
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 13 ms
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [http-nio-19090-exec-3] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-49] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-49] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-49] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1253 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2da79964] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1815 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.173 seconds (JVM running for 25.096)
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 12 ms
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-48] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-48] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-48] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1277 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$13e2c9aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1993 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.711 seconds (JVM running for 25.536)
+2019-06-12 === [Thread-48] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Starting StaticsApplication on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1318 (/Users/ag/Downloads/statics/target/classes started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-06-12 === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7806b247] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 19090 (http)
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-06-12 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-12 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-06-12 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1849 ms
+2019-06-12 === [restartedMain] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [restartedMain] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [restartedMain] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 19090 (http) with context path ''
+2019-06-12 === [restartedMain] === INFO  === com.ag.statics.StaticsApplication ==== Started StaticsApplication in 19.11 seconds (JVM running for 24.863)
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 11 ms
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.EpollProvider ==== Starting without optional epoll library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === io.lettuce.core.KqueueProvider ==== Starting without optional kqueue library
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2019-06-12 === [http-nio-19090-exec-1] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [http-nio-19090-exec-3] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [http-nio-19090-exec-4] === INFO  === com.ag.statics.service.Impl.MovieServiceImpl ==== InnoDB
+2019-06-12 === [Thread-47] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [Thread-47] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2019-06-12 === [Thread-47] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2019-06-12 === [main] === INFO  === com.ag.statics.StaticsApplicationTests ==== Starting StaticsApplicationTests on wokuaibeiwanhuailezdeMacBook-Pro.local with PID 1349 (started by ag in /Users/ag/Downloads/statics)
+2019-06-12 === [main] === INFO  === com.ag.statics.StaticsApplicationTests ==== No active profile set, falling back to default profiles: default
+2019-06-12 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-06-12 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c88a5f0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 === [main] === INFO  === s.d.s.w.PropertySourcedRequestMappingHandlerMapping ==== Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-12 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2019-06-12 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2019-06-12 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2019-06-12 === [main] === INFO  === com.ag.statics.StaticsApplicationTests ==== Started StaticsApplicationTests in 19.962 seconds (JVM running for 20.992)
+2019-06-12 === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'

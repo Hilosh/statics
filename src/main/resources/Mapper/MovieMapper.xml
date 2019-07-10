@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ag.statics.dao.MovieMapper">
+    <insert id="insertCountryQuantity" parameterType="java.util.List">
+        INSERT INTO country_quantity(country, quantity)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.country,jdbcType=VARCHAR},#{item.quantity,jdbcType=INTEGER})
+        </foreach>
+    </insert>
+    <insert id="insertGenreQuantity" parameterType="java.util.List">
+        INSERT INTO genre_quantity(genre, quantity)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.genre,jdbcType=VARCHAR},#{item.quantity,jdbcType=INTEGER})
+        </foreach>
+    </insert>
+    <insert id="insertMovieGenre" parameterType="java.util.List">
+        INSERT INTO movie_genre(movie_id,genre_id)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.movie_id,jdbcType=INTEGER},#{item.genre_id,jdbcType=INTEGER})
+        </foreach>
+    </insert>
+    <update id="updateId">
+        UPDATE movies
+        <set>
+            <if test="actor_one!=null">actor_one = #{actor_one},</if>
+            <if test="actor_two!=null">actor_two = #{actor_two},</if>
+            <if test="director!=null">director = #{director},</if>
+            <if test="author!=null">author = #{author},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+    <select id="select" resultType="com.ag.statics.model.Movie">
+        select *
+        from movies
+    </select>
+    <select id="selectCountByCountry" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT COUNT(*)
+        FROM movies
+        <if test="country!=null">
+            <where>
+                country LIKE CONCAT('%',#{country},'%')
+            </where>
+        </if>
+    </select>
+    <select id="selectCountries" resultType="java.lang.String">
+        SELECT country
+        FROM movies
+        GROUP BY country
+    </select>
+    <select id="selectCountryQuantity" resultType="com.ag.statics.model.CountryQuantity">
+        SELECT *
+        FROM country_quantity
+    </select>
+    <select id="selectCountByGenre" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT COUNT(*)
+        FROM movies
+        <if test="genre!=null">
+            <where>
+                genre LIKE CONCAT('%',#{genre},'%')
+            </where>
+        </if>
+    </select>
+    <select id="selectGenres" resultType="java.lang.String">
+        SELECT genre
+        FROM movies
+        GROUP BY genre
+    </select>
+    <select id="selectMovieByGenre" resultType="com.ag.statics.model.Movie" parameterType="java.lang.String">
+        SELECT *
+        FROM movies
+        <where>
+            genre LIKE CONCAT('%',#{genre},'%')
+        </where>
+    </select>
+    <select id="selectGenreQuantity" resultType="com.ag.statics.model.GenreQuantity">
+        SELECT *
+        FROM genre_quantity
+    </select>
+    <select id="selectMovieById" resultType="com.ag.statics.model.Movie" parameterType="integer">
+        SELECT *
+        FROM movies
+        WHERE id = #{id}
+    </select>
+    <select id="selectActor" resultType="java.lang.Integer">
+        SELECT person_id
+        FROM relationships
+        WHERE movie_id = #{id} and role = 'actor'
+    </select>
+    <select id="selectDirector" resultType="java.lang.Integer">
+        SELECT person_id
+        FROM relationships
+        WHERE movie_id = #{id} and role = 'director'
+    </select>
+    <select id="selectAuthor" resultType="java.lang.Integer">
+        SELECT person_id
+        FROM relationships
+        WHERE movie_id = #{id} and role = 'author'
+    </select>
+    <select id="selectMovieByName" resultType="com.ag.statics.model.Movie">
+        SELECT *
+        FROM movies
+        WHERE name LIKE CONCAT('%',#{name},'%')
+    </select>
+</mapper>
